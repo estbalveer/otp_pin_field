@@ -22,7 +22,9 @@ class OtpPinFieldState extends State<OtpPinField> with TickerProviderStateMixin,
     pinsInputed = [];
     if (widget.autoFillEnable == true) {
       if (widget.phoneNumbersHint == true) {
-        _OtpPinFieldAutoFill().hint;
+        _OtpPinFieldAutoFill().hint.then((value) {
+          debugPrint('your phone value is $value');
+        });
       }
       _OtpPinFieldAutoFill().getAppSignature.then((value) {
         debugPrint('your hash value is $value');
