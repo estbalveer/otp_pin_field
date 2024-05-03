@@ -31,7 +31,7 @@ class OtpPinField extends StatefulWidget {
   final bool? showCustomKeyboard;
   final bool? showDefaultKeyboard;
   final Function(String)? onCodeChanged;
-  final Function(String)? onPhoneHintSelected;
+  final Function(String?)? onPhoneHintSelected;
 
   const OtpPinField(
       {Key? key,
