@@ -23,6 +23,7 @@ class OtpPinFieldState extends State<OtpPinField> with TickerProviderStateMixin,
     if (widget.autoFillEnable == true) {
       if (widget.phoneNumbersHint == true) {
         _OtpPinFieldAutoFill().hint.then((value) {
+          widget.onPhoneHintSelected(value);
           debugPrint('your phone value is $value');
         });
       }
